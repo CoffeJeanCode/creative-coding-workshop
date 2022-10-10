@@ -14,7 +14,7 @@
 .js {
   color: yellow;
   background-color: #ffe23e;
-  background-image: linear-gradient(0deg, #263336 10%, #f3d21a 100% );
+  background-image: linear-gradient(0deg, #6b6b3a 10%, #f3d21a 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -22,8 +22,13 @@
 
 .art {
   color: hotpink;
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -31,5 +36,5 @@
 
 .examples {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }

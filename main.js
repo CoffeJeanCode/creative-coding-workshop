@@ -1,9 +1,10 @@
 import Reveal from "reveal.js";
 import p5 from "p5";
 import Markdown from "reveal.js/plugin/markdown/markdown.esm.js";
+import Highlight from "reveal.js/plugin/highlight/highlight.esm.js";
 
 let deck = new Reveal({
-  plugins: [Markdown],
+  plugins: [Markdown, Highlight],
 });
 deck.initialize();
 
@@ -56,15 +57,15 @@ const examples = {
         p.strokeWeight(3);
         p.strokeCap("round");
 
-        const radius = lineLength * 0.7;
+        const radius = lineLength * 0.5;
         const horizontalGap = lineLength + GAP;
         const verticalGap = lineLength + GAP;
 
         for (let rows = 0; rows < p.width; rows++) {
           p.stroke(rows * 10, 255 - rows, 255 - rows * 10);
           for (let cols = 0; cols < p.height; cols++) {
-            const centerX = rows * horizontalGap + horizontalGap;
-            const centerY = cols * verticalGap + verticalGap;
+            const centerX = rows * horizontalGap + horizontalGap / 2;
+            const centerY = cols * verticalGap + verticalGap / 2;
 
             const deltaX = centerX - p.mouseX;
             const deltaY = centerY - p.mouseY;
@@ -76,7 +77,7 @@ const examples = {
             const xRatio = deltaX * hypRatio;
             const yRatio = deltaY * hypRatio;
 
-            const dampenBy = p.constrain(p.map(distance, 300, 0, 1, 0), 0, 1);
+            const dampenBy = p.constrain(p.map(distance, 200, 0, 1, 0), 0, 1);
             const p1 = {
               x: centerX - xRatio * dampenBy,
               y: centerY - yRatio * dampenBy,

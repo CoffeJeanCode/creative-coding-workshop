@@ -4,10 +4,17 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Coding</title>
+    <title>Creative Coding Workshop</title>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
-    <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/moon.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/plugin/highlight/monokai.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/reveal.js/dist/theme/night.css"
+    />
   </head>
   <body>
     <main class="reveal">
@@ -51,16 +58,54 @@
           </div>
         </section>
         <section>
-          <h3>Referencias</h3>
+          <section>
+            <h2>Tematica</h2>
+            <ul>
+              <li>Canvas</li>
+              <li>Coordenadas</li>
+              <li>Geometría</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Canvas</h2>
+            <h3>HTML</h3>
+            <pre>
+              <code  data-line-numbers data-trim>
+                <canvas id="myCanvas"></canvas>
+              </code>
+            </pre>
+            <h3>JS</h3>
+            <pre>
+              <code  data-line-numbers data-trim>
+                const myCanvas = document.getElementById("myCanvas")
+                const context = myCanvas.getContext("2d")
+                context.fillStyle = "rgb(200,0,0)";
+                context.fillRect (10, 10, 55, 50);
+
+                context.fillStyle = "rgba(0, 0, 200, 0.5)";
+                context.fillRect (30, 30, 55, 50);
+              </code>
+            </pre>
+          </section>
+        </section>
+        <section>
+          <h2>Referencias</h2>
           <ul>
+            <li>
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/HTML/Element/canvas"
+                target="__bank"
+                >Canvas MDN Web Docs</a
+              >
+            </li>
             <li>
               <a href="https://www.youtube.com/c/TheCodingTrain" target="__bank"
                 >Code Train</a
               >
             </li>
-            <li><a href="https://p5js.org/" target="__bank">
-              P5js Library
-            </a></li>
+            <li>
+              <a href="https://p5js.org/" target="__bank"> P5js Library </a>
+            </li>
             <li>
               <a href="http://www.generative-gestaltung.de/2/" target="__bank"
                 >Generative Design Gallery</a
